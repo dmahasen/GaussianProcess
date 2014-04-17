@@ -36,6 +36,7 @@ Kx = kernCompute(kern, xTest, xTrain)
 Ktrain = kernCompute(kern, xTrain, xTrain)
 
 invKtrain = .jitCholInv(Ktrain, silent=TRUE)$invM
+Matrix::chol
 yPred = Kx%*%invKtrain%*%yTrain
 yVar = kernDiagCompute(kern, xTest) - rowSums(Kx%*%invKtrain * Kx)
 
