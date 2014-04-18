@@ -51,3 +51,5 @@ figBM2a <- ggplot(dat,aes(x=x,y=value)) +
   xlab("input, x")
 figBM2a
 
+obs <- data.frame(x = c(-4, -3,-1,0,2),
+                  y = c(-2,  0,  1,  2, -1))
